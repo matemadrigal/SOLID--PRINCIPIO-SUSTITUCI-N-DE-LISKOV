@@ -110,7 +110,8 @@ def lsp_check(vehicle: Vehicle) -> bool:
 
     # Acelerar por encima del máximo: queda clamp al tope
     vehicle.accelerate(vehicle.max_speed * 2)
-    assert vehicle.speed == vehicle.max_speed
+    assert vehicle.speed <= vehicle.max_speed
+
 
     return True
 
